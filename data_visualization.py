@@ -33,7 +33,15 @@ x = dataframe_all.ix[:,:-1].values
 standard_scaler = StandardScaler()
 x_std = standard_scaler.fit_transform(x)
 
-# step 4: split the data into training set and test set
+# step 4: get class labels y and then encode it into number 
+# get class label data
+y = dataframe_all.ix[:,-1].values
+# encode the class label
+class_labels = np.unique(y)
+label_encoder = LabelEncoder()
+y = label_encoder.fit_transform(y)
+
+# step 5: split the data into training set and test set
 test_percentage = 0.1
 x_train, x_test, y_train, y_test = train_test_split(x_std, y, test_size = test_percentage, random_state = 0)
 
