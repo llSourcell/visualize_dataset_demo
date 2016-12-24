@@ -8,8 +8,6 @@ from sklearn.metrics import accuracy_score
 
 # visulaize the important characteristics of the dataset
 import matplotlib.pyplot as plt
-# seaborn is a library for drawing statistics plots based on matplotlib
-import seaborn as sns
 
 # step 1: download the data
 dataframe_all = pd.read_csv("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv")
