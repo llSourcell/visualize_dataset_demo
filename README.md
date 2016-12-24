@@ -25,4 +25,4 @@ The challenge for this video is to visualize [this](https://www.kaggle.com/myles
 
 ##Credits
 
-The credits for this code go to [Yifeng-He](https://github.com/Yifeng-He). I've mereley created a wrapper around the code to make it easy for people to get started.
+The credits for this code go to [Yifeng-He](https://github.com/Yifeng-He). I've merely created a wrapper around the code to make it easy for people to get started.
