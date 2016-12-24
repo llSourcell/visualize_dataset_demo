@@ -2,7 +2,7 @@
 
 #Overview
 
-This is the code for [this]() video by Siraj Raval on Youtube. The human activities dataset contains 5 classes (sitting-down, standing-up, standing, walking, and sitting) collected on 8 hours of activities of 4 healthy subjects. The data set is downloaded from [here](http://groupware.les.inf.puc-rio.br/har#ixzz4Mt0Teae2). This code downloads the dataset, cleans it, creates feature vectors, then uses [T-SNE](https://lvdmaaten.github.io/tsne/) to reduce the dimensionality of the feature vectors to just 2. Then, we use matplotlib to visualize the data. 
+This is the code for [this](https://youtu.be/yQsOFWqpjkE) video by Siraj Raval on Youtube. The human activities dataset contains 5 classes (sitting-down, standing-up, standing, walking, and sitting) collected on 8 hours of activities of 4 healthy subjects. The data set is downloaded from [here](http://groupware.les.inf.puc-rio.br/har#ixzz4Mt0Teae2). This code downloads the dataset, cleans it, creates feature vectors, then uses [T-SNE](https://lvdmaaten.github.io/tsne/) to reduce the dimensionality of the feature vectors to just 2. Then, we use matplotlib to visualize the data. 
 
 ##Dependencies
 
