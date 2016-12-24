@@ -33,57 +33,9 @@ x = dataframe_all.ix[:,:-1].values
 standard_scaler = StandardScaler()
 x_std = standard_scaler.fit_transform(x)
 
-# step 4: get class labels y and then encode it into number 
-# get class label data
-y = dataframe_all.ix[:,-1].values
-# encode the class label
-class_labels = np.unique(y)
-label_encoder = LabelEncoder()
-y = label_encoder.fit_transform(y)
-
-# step 5: split the data into training set and test set
+# step 4: split the data into training set and test set
 test_percentage = 0.1
 x_train, x_test, y_train, y_test = train_test_split(x_std, y, test_size = test_percentage, random_state = 0)
-
-# ****** 8) Random Forest ********************
-from sklearn.ensemble import RandomForestClassifier
-model8 = RandomForestClassifier(n_estimators=60, random_state=0, n_jobs=-1)
-model8.fit(x_train, y_train)
-y_pred8 = model8.predict(x_test)
-accuracy8 = accuracy_score(y_test, y_pred8)
-print("Random Forest Accuracy: %.2f%%" % (accuracy8 * 100.0))
-
-# ************** Data Visualization ******************
-
-# 1) plot the pair-wise relationship between two features
-sns.set(style='whitegrid', context='notebook')
-#the first 4 columns 
-cols=columns[:4]
-# scatterplot the pair-wise relationship
-sns.pairplot(dataframe_all[cols],size=2.5)
-plt.show()
-
-# 2) plot the heatmap to show the correlation coefficiencies in pair-wise-features
-#the last column is the class label 
-cols2 = columns[:-1]
-# calculate the correlation coefficiencies
-correlation_matrix = np.corrcoef(dataframe_all[cols2].values.T)
-#sns.set(font_scale = 1.5)
-# heatmap
-plt.figure()
-heatmap_correlations = sns.heatmap(correlation_matrix, cbar=True, annot=True, fmt='.2f', annot_kws={'size':10}, 
- yticklabels=[x for x in range(len(cols2))],xticklabels=[x for x in range(len(cols2))])
-plt.show()
-
-# 3) fetaure importance obtained from random forest
-importances = model8.feature_importances_
-plt.figure()
-plt.title('Feature Importances')
-plt.bar(range(importances.shape[0]),importances)
-plt.xlabel('Feature')
-plt.ylabel('Importance')
-plt.xlim([0,importances.shape[0]])
-plt.show()
 
 # t-distributed Stochastic Neighbor Embedding (t-SNE) visualization
 from sklearn.manifold import TSNE
