@@ -23,6 +23,8 @@ To run this code, just run the following in terminal:
 
 The challenge for this video is to visualize [this](https://www.kaggle.com/mylesoneill/game-of-thrones) Game of Thrones dataset. Use T-SNE to lower the dimensionality of the data and plot it using matplotlib. In your README, write our 2-3 sentences of something you discovered about the data after visualizing it. This will be great practice in understanding why dimensionality reduction is so important and analyzing data visually.
 
+##Due Date is December 29th 2016
+
 ##Credits
 
 The credits for this code go to [Yifeng-He](https://github.com/Yifeng-He). I've merely created a wrapper around the code to make it easy for people to get started.
