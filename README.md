@@ -13,6 +13,9 @@ This is the code for [this](https://youtu.be/yQsOFWqpjkE) video by Siraj Raval o
 
 Install dependencies via '[pip](https://pypi.python.org/pypi/pip) install'. (i.e pip install pandas). 
 
+Note** updated dataset is here if the other link is broken
+http://rstudio-pubs-static.s3.amazonaws.com/19668_2a08e88c36ab4b47876a589bb1d61c37.html﻿
+
 ##Usage
 
 To run this code, just run the following in terminal: 
